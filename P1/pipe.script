@@ -1,9 +1,0 @@
-Script started on Mon 27 Aug 2018 01:01:49 PM CDT
-[?1034hbash-4.2$ more [K[K[K[K[Kexit/sbin /proc/interrupts > lspci.txt[C[C[C[C[C[C[C[C[C[C[2Pmore /proc/meminfo > meminfo.txt[3Pcpuinfo > test.txt[C[C[C[C[C[C[C[C[C[Cgdb[Kmore /proc/cpuinfo > test.txt
-bash-4.2$ more /proc/cpuinfo > test.txt[C[C[C[C[C[C[C[C[C[Cexit[K/sbin /proc/interrupts > lspci.txt[C[C[C[C[C[C[C[C[C[C[2Pmore /proc/meminfo > meminfo.txt
-bash-4.2$ /sbin/lspci > lspu[Kcu.[K[Ki.txt
-bash-4.2$ more / [K[[Kproc/interrupts > interruprs[K[Kts.txt
-bash-4.2$ exit
-exit
-
-Script done on Mon 27 Aug 2018 01:02:43 PM CDT
