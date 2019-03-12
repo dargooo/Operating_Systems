@@ -3,26 +3,29 @@ import java.awt.*;
 
 public class MainView extends JFrame {
 
-    public JButton btnAdd, btnUpdate, btnCheckout;
+    public JButton btnAdd, btnUpdate, btnCheckout, btnOrder;
 
     public MainView() {
-        this.setTitle("Store Management System");
-        this.setSize(new Dimension(600, 300));
-        this.getContentPane().setLayout(new BoxLayout(this.getContentPane(), BoxLayout.PAGE_AXIS));
+        this.setTitle("*** Store Management System ***");
+        this.setSize(new Dimension(600, 400));
+        this.getContentPane().setLayout(new BorderLayout());
+
+        JPanel p = new JPanel();
+        p.setBorder(BorderFactory.createEmptyBorder(30,120,30,120));
+        p.setLayout(new GridLayout(4,1,0, 10));
 
         btnCheckout = new JButton("Check Out");
-        JPanel line1 = new JPanel();
-        line1.add(btnCheckout);
-        this.getContentPane().add(line1);
+        p.add(btnCheckout);
 
         btnAdd = new JButton("Add Product");
-        JPanel line2 = new JPanel();
-        line2.add(btnAdd);
-        this.getContentPane().add(line2);
+        p.add(btnAdd);
 
         btnUpdate = new JButton("Update Product");
-        JPanel line3 = new JPanel();
-        line3.add(btnUpdate);
-        this.getContentPane().add(line3);
+        p.add(btnUpdate);
+
+        btnOrder = new JButton("Search Order");
+        p.add(btnOrder);
+
+        this.getContentPane().add(p);
     }
 }

@@ -27,9 +27,13 @@ public class ProductController implements ActionListener {
 
         if (e.getSource() == pView.btnCancel) {
             StoreManager.mainView.show();
+            StoreManager.productView.setVisible(false);
+            StoreManager.productView.clear();
         }
 
     }
+
+
 
     private void saveProduct() {
         ProductModel productModel = new ProductModel();
@@ -60,7 +64,7 @@ public class ProductController implements ActionListener {
             int productID = Integer.parseInt(pView.txtProductID.getText());
             ProductModel productModel = db.loadProduct(productID);
             if (productModel == null) {
-                pView.checkLabel.setText("New Product.");
+                JOptionPane.showMessageDialog(null, "New product!");
                 pView.txtProductName.setText("");
                 pView.txtProductBarcode.setText("");
                 pView.txtProductQuantity.setText("");
@@ -69,7 +73,7 @@ public class ProductController implements ActionListener {
                 pView.txtContact.setText("");
             }
             else {
-                pView.checkLabel.setText("Product Exists.");
+                JOptionPane.showMessageDialog(null, "Product Exists!");
                 pView.txtProductName.setText(productModel.name);
                 pView.txtProductBarcode.setText(String.valueOf(productModel.barcode));
                 pView.txtProductQuantity.setText(String.valueOf(productModel.quantity));
