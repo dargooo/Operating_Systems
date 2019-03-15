@@ -105,6 +105,32 @@ public class OrderSearchView extends JFrame {
         txtLast.setText("");
         txtMonth.setText("");
         txtYear.setText("");
+
+        c.removeAll();
+        FlowLayout f = new FlowLayout();
+        c.setLayout(f);
+        f.setAlignment(FlowLayout.CENTER);
+        f.setHgap(0);
+        c1 = new Container();
+        c2 = new Container();
+        c3 = new Container();
+        c4 = new Container();
+        c5 = new Container();
+        c6 = new Container();
+        c1.setLayout(new BoxLayout(c1, BoxLayout.PAGE_AXIS));
+        c2.setLayout(new BoxLayout(c2, BoxLayout.Y_AXIS));
+        c3.setLayout(new BoxLayout(c3, BoxLayout.Y_AXIS));
+        c4.setLayout(new BoxLayout(c4, BoxLayout.Y_AXIS));
+        c5.setLayout(new BoxLayout(c5, BoxLayout.Y_AXIS));
+        c6.setLayout(new BoxLayout(c6, BoxLayout.Y_AXIS));
+        c.add(c1);
+        c.add(c2);
+        c.add(c3);
+        c.add(c4);
+        c.add(c5);
+        c.add(c6);
+        p.add(c, BorderLayout.CENTER);
+
     }
 
 }

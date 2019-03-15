@@ -26,8 +26,8 @@ public class OrderSearchController implements ActionListener {
         }
         if (e.getSource() == sView.btnCancel) {
             StoreManager.mainView.show();
-            StoreManager.searchView.setVisible(false);
             StoreManager.searchView.clear();
+            StoreManager.searchView.setVisible(false);
         }
 
     }
