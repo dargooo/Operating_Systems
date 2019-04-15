@@ -31,7 +31,7 @@ public class AddUserController implements ActionListener {
     }
 
 
-    private void addUser() {
+    public void addUser() {
         UserModel user = new UserModel();
 
         try {
@@ -39,14 +39,25 @@ public class AddUserController implements ActionListener {
             user.userName = aView.txtUserName.getText();
             user.role = aView.txtRole.getText();
             user.password = aView.txtPassword1.getText();
+            user.name = aView.txtName.getText();
+
+            if (user.userName.equals("") || user.role.equals("") || user.password.equals("")) {
+                JOptionPane.showMessageDialog(null, "Please fill in all the blanks!");
+                return;
+            }
+
+            if (db.findUser(user.userName) != null) {
+                JOptionPane.showMessageDialog(null, "User Name already exists!");
+                return;
+            }
 
             if (!user.password.equals(aView.txtPassword2.getText())) {
                 JOptionPane.showMessageDialog(null, "Passwords don't match!");
+                return;
             }
-            else {
-                db.addUser(user);
-                JOptionPane.showMessageDialog(null, "User added successfully!");
-            }
+
+            db.addUser(user);
+            JOptionPane.showMessageDialog(null, "User added successfully!");
 
         } catch (NumberFormatException ex) {
             JOptionPane.showMessageDialog(null, "Invalid format for User");

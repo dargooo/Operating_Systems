@@ -37,4 +37,9 @@ public class LoginView extends JFrame {
         this.getContentPane().add(btnPanel);
     }
 
+    public void clear() {
+        txtId.setText("");
+        txtPassword.setText("");
+    }
+
 }

@@ -9,7 +9,7 @@ public class AdminController implements ActionListener {
     public AdminController(AdminView adminView) {
         this.adminView = adminView;
         adminView.btnExit.addActionListener(this);
-        adminView.btnExit.addActionListener(this);
+        adminView.btnChange.addActionListener(this);
         adminView.btnAdd.addActionListener(this);
     }
 

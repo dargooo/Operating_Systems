@@ -40,7 +40,7 @@ public class ChangeUserController implements ActionListener {
             return;
         }
         //old password is correct?
-        String password = cView.txtPassword1.getText();
+        String password = cView.txtPasswordOld.getText();
         if (!user.password.equals(password)) {
             JOptionPane.showMessageDialog(null, "Old password isn't correct!");
             return;

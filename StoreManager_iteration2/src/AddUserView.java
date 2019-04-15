@@ -5,6 +5,7 @@ public class AddUserView extends JFrame {
 
     public JTextField txtUserName = new JTextField(15);
     public JTextField txtRole = new JTextField(15);
+    public JTextField txtName = new JTextField(15);
     public JTextField txtPassword1 = new JTextField(15);
     public JTextField txtPassword2 = new JTextField(15);
 
@@ -19,12 +20,14 @@ public class AddUserView extends JFrame {
 
         //infos
         JPanel p = new JPanel();
-        p.setLayout(new GridLayout(0,2,25,10));
-        p.setBorder(BorderFactory.createEmptyBorder(20,150,20,150));
-        p.add(new JLabel("User Name", JLabel.TRAILING));
-        p.add(txtUserName);
+        p.setLayout(new GridLayout(5,2,25,20));
+        p.setBorder(BorderFactory.createEmptyBorder(40,120,30,120));
+        p.add(new JLabel("Name", JLabel.TRAILING));
+        p.add(txtName);
         p.add(new JLabel("Role", JLabel.TRAILING));
         p.add(txtRole);
+        p.add(new JLabel("User Name", JLabel.TRAILING));
+        p.add(txtUserName);
         p.add(new JLabel("Password", JLabel.TRAILING));
         p.add(txtPassword1);
         p.add(new JLabel("Re-enter Password", JLabel.TRAILING));
@@ -33,7 +36,7 @@ public class AddUserView extends JFrame {
         this.getContentPane().add(p);
 
         JPanel buttonPanel = new JPanel();
-        buttonPanel.setBorder(BorderFactory.createEmptyBorder(0,0,30,0));
+        //buttonPanel.setBorder(BorderFactory.createEmptyBorder(0,0,30,0));
         buttonPanel.add(btnCancel);
         buttonPanel.add(btnSave);
 
@@ -45,6 +48,7 @@ public class AddUserView extends JFrame {
         txtPassword2.setText("");
         txtUserName.setText("");
         txtRole.setText("");
+        txtName.setText("");
     }
 
 }

@@ -24,18 +24,26 @@ public class DataAdapter {
             Statement stmt = conn.createStatement();
 
             ResultSet rs = stmt.executeQuery("SELECT * FROM product_table");
-            while (rs.next())
+            while (rs.next()) {
                 System.out.println(rs.getString(1) + " " + rs.getString(2) + " " + rs.getString(3) + " " + rs.getString(4)
                         + " " + rs.getString(5) + " " + rs.getString(6) + " " + rs.getString(7));
+            }
 
             ResultSet rs2 = stmt.executeQuery("SELECT * FROM order_table");
-            while (rs2.next())
+            while (rs2.next()) {
                 System.out.println(rs2.getString(1) + " " + rs2.getString(2) + " " + rs2.getString(3) + " $" + rs2.getString(4)
                         + " $" + rs2.getString(5) + " $" + rs2.getString(6));
+            }
+
+            ResultSet rs4 = stmt.executeQuery("SELECT * FROM return_table");
+            while (rs4.next()) {
+                System.out.println(rs4.getString(1) + " " + rs4.getString(2) + " " + rs4.getString(3) + " $" + rs4.getString(4)
+                        + " $" + rs4.getString(5) + " $" + rs4.getString(6));
+            }
 
             ResultSet rs3 = stmt.executeQuery("SELECT * FROM user_table");
             while (rs3.next()) {
-                System.out.println(rs3.getInt(1) + " " + rs3.getString(2) + " " + rs3.getString(3) + " " + rs3.getString(4));
+                System.out.println(rs3.getInt(1) + " " + rs3.getString(2) + " " + rs3.getString(3) + " " + rs3.getString(4) + " " + rs3.getString(5));
             }
 
         } catch (Exception e) {
@@ -221,7 +229,8 @@ public class DataAdapter {
 
     public List<OrderModel> searchDate(String date) {
         List<OrderModel> list = new ArrayList<OrderModel>();
-        try(PreparedStatement pstmt = conn.prepareStatement("SELECT * FROM order_table WHERE date_time = ?");) {
+        try {
+            PreparedStatement pstmt = conn.prepareStatement("SELECT * FROM order_table WHERE date_time = ?");
             pstmt.setString(1, date);
             ResultSet rs = pstmt.executeQuery();
             while (rs.next()) {
@@ -243,13 +252,25 @@ public class DataAdapter {
     public void addUser(UserModel user) {
         try {
 
-            String query = "INSERT INTO user_table values (?, ?, ?, ?)";
+            String query = "INSERT INTO user_table values (?, ?, ?, ?, ?)";
             PreparedStatement ps = conn.prepareStatement(query);
             ps.setInt(1, user.userId);
             ps.setString(2, user.userName);
             ps.setString(3, user.password);
-            ps.setString(4, user.role);
+            ps.setString(4, user.name);
+            ps.setString(5, user.role);
             ps.execute();
+
+            if (user.role.equals("customer")) {
+                String query2 = "INSERT INTO customer_table values (?, ?, ?, ?, ?)";
+                PreparedStatement ps2 = conn.prepareStatement(query2);
+                ps2.setInt(1, user.userId);
+                ps2.setString(2, user.userName);
+                ps2.setString(3, user.name);
+                ps2.setString(4, "");
+                ps2.setString(5, "");
+                ps2.execute();
+            }
 
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -259,14 +280,16 @@ public class DataAdapter {
     public UserModel findUser(String userName) {
         UserModel user = null;
         try {
-            Statement stmt = conn.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT * FROM user_table WHERE user_name = " + userName);
+            PreparedStatement pstmt = conn.prepareStatement("SELECT * FROM user_table WHERE user_name = ?");
+            pstmt.setString(1, userName);
+            ResultSet rs = pstmt.executeQuery();
             if (rs.next()) {
                 user = new UserModel();
                 user.userId = rs.getInt(1);
                 user.userName = rs.getString(2);
                 user.password = rs.getString(3);
-                user.role = rs.getString(4);
+                user.name = rs.getString(4);
+                user.role = rs.getString(5);
             }
             else {
                 return user;
@@ -287,6 +310,48 @@ public class DataAdapter {
         ps.setString(4, user.role);
         ps.setString(5, user.userName);
         ps.execute();
+    }
+
+    public CustomerModel findCustomer(int userId) {
+        CustomerModel customer = null;
+        try {
+            PreparedStatement pstmt = conn.prepareStatement("SELECT * FROM customer_table WHERE user_id = ?");
+            pstmt.setInt(1, userId);
+            ResultSet rs = pstmt.executeQuery();
+            if (rs.next()) {
+                customer = new CustomerModel();
+                customer.userId = rs.getInt(1);
+                customer.userName = rs.getString(2);
+                customer.name = rs.getString(3);
+                customer.addr = rs.getString(4);
+                customer.phone = rs.getString(5);
+            }
+            else {
+                return customer;
+            }
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        return customer;
+    }
+
+    public void saveCustomer(CustomerModel customer) throws SQLException {
+        String query = "UPDATE customer_table SET user_id = ?, user_name = ?, name = ?, address = ?, phone = ? WHERE user_id = ?";
+        PreparedStatement ps = conn.prepareStatement(query);
+        ps.setInt(1, customer.userId);
+        ps.setString(2, customer.userName);
+        ps.setString(3, customer.name);
+        ps.setString(4, customer.addr);
+        ps.setString(5, customer.phone);
+        ps.setInt(6, customer.userId);
+        ps.execute();
+
+        String query2 = "UPDATE user_table SET user_name = ? where user_id = ?";
+        PreparedStatement ps2 = conn.prepareStatement(query2);
+        ps2.setString(1,customer.userName);
+        ps2.setInt(2, customer.userId);
+        ps2.execute();
     }
 
 }

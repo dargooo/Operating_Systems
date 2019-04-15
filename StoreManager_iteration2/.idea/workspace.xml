@@ -2,34 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c6b4b5e-caa0-4dad-ad64-d42be66f4b2c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/AddUserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AddUserView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ChangeUserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ChangeUserView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CheckoutController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CheckoutView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CustomerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CustomerView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/OrderModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ProductModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ProductView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ReturnController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ReturnModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ReturnView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UserModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomerInfoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomerInfoView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomerModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../StoreManager_iteration1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../StoreManager_iteration1/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/StoreManager_iteration2/AddUserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StoreManager_iteration2/AddUserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/StoreManager_iteration2/AddUserView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StoreManager_iteration2/AddUserView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/StoreManager_iteration2/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StoreManager_iteration2/AdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/StoreManager_iteration2/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StoreManager_iteration2/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/StoreManager_iteration2/ChangeUserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StoreManager_iteration2/ChangeUserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/StoreManager_iteration2/ChangeUserView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StoreManager_iteration2/ChangeUserView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/StoreManager_iteration2/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StoreManager_iteration2/CustomerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/StoreManager_iteration2/CustomerView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StoreManager_iteration2/CustomerView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/StoreManager_iteration2/DataAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StoreManager_iteration2/DataAdapter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/StoreManager_iteration2/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StoreManager_iteration2/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/StoreManager_iteration2/LoginView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StoreManager_iteration2/LoginView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/StoreManager_iteration2/ReturnController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StoreManager_iteration2/ReturnController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/StoreManager_iteration2/UserModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StoreManager_iteration2/UserModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AddUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AddUserView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddUserView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AdminView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdminView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CashierController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CashierController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CashierView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CashierView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ChangeUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChangeUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ChangeUserView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ChangeUserView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CustomerView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomerView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LoginView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LoginView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ManagerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ManagerView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ManagerView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReturnController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReturnController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store.db" beforeDir="false" afterPath="$PROJECT_DIR$/store.db" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,43 +45,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Application.java">
+        <entry file="file://$PROJECT_DIR$/src/CustomerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ManagerController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AdminController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="39" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AddUserView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="61">
+              <caret line="12" column="52" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -88,8 +59,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AddUserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+            <state relative-caret-position="94">
+              <caret line="42" selection-start-line="42" selection-end-line="42" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -98,46 +69,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ChangeUserView.java">
+        <entry file="file://$PROJECT_DIR$/src/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="150">
+              <caret line="23" column="67" lean-forward="true" selection-start-line="23" selection-start-column="67" selection-end-line="23" selection-end-column="67" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ChangeUserController.java">
+        <entry file="file://$PROJECT_DIR$/src/LoginController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="59" column="15" selection-start-line="59" selection-start-column="15" selection-end-line="59" selection-end-column="15" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CheckoutController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="83" column="8" selection-start-line="83" selection-start-column="8" selection-end-line="86" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ProductController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="825">
-              <caret line="55" column="38" selection-start-line="55" selection-start-column="38" selection-end-line="55" selection-end-column="38" />
+            <state relative-caret-position="24">
+              <caret line="53" column="21" lean-forward="true" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -148,12 +92,67 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/DataAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="12" column="45" lean-forward="true" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
+            <state relative-caret-position="299">
+              <caret line="353" column="22" selection-start-line="353" selection-start-column="22" selection-end-line="353" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#5887#5899#0" expanded="true" />
-                <element signature="e#6722#6734#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CustomerModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CustomerInfoView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="268">
+              <caret line="44" selection-start-line="44" selection-end-line="44" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AddUserView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="45" column="25" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CustomerInfoController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="331">
+              <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ProductController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="56" column="33" lean-forward="true" selection-start-line="55" selection-start-column="12" selection-end-line="56" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -177,8 +176,6 @@
         <option value="$PROJECT_DIR$/src/CheckoutView.java" />
         <option value="$PROJECT_DIR$/src/ProductModel.java" />
         <option value="$PROJECT_DIR$/src/ProductView.java" />
-        <option value="$PROJECT_DIR$/src/LoginView.java" />
-        <option value="$PROJECT_DIR$/src/LoginController.java" />
         <option value="$PROJECT_DIR$/src/ManagerController.java" />
         <option value="$PROJECT_DIR$/src/ProductController.java" />
         <option value="$PROJECT_DIR$/src/ManagerView.java" />
@@ -188,23 +185,30 @@
         <option value="$PROJECT_DIR$/src/OrderModel.java" />
         <option value="$PROJECT_DIR$/src/CheckoutController.java" />
         <option value="$PROJECT_DIR$/src/ReturnModel.java" />
-        <option value="$PROJECT_DIR$/src/ReturnController.java" />
         <option value="$PROJECT_DIR$/src/AdminView.java" />
-        <option value="$PROJECT_DIR$/src/UserModel.java" />
-        <option value="$PROJECT_DIR$/src/AddUserView.java" />
-        <option value="$PROJECT_DIR$/src/ChangeUserView.java" />
-        <option value="$PROJECT_DIR$/src/AddUserController.java" />
+        <option value="$PROJECT_DIR$/src/LoginView.java" />
         <option value="$PROJECT_DIR$/src/AdminController.java" />
         <option value="$PROJECT_DIR$/src/ChangeUserController.java" />
+        <option value="$PROJECT_DIR$/src/ReturnController.java" />
+        <option value="$PROJECT_DIR$/src/CustomerView.java" />
+        <option value="$PROJECT_DIR$/src/CustomerModel.java" />
+        <option value="$PROJECT_DIR$/src/UserModel.java" />
+        <option value="$PROJECT_DIR$/src/AddUserController.java" />
+        <option value="$PROJECT_DIR$/src/ChangeUserView.java" />
+        <option value="$PROJECT_DIR$/src/AddUserView.java" />
+        <option value="$PROJECT_DIR$/src/LoginController.java" />
         <option value="$PROJECT_DIR$/src/Application.java" />
+        <option value="$PROJECT_DIR$/src/CustomerInfoView.java" />
+        <option value="$PROJECT_DIR$/src/CustomerController.java" />
+        <option value="$PROJECT_DIR$/src/CustomerInfoController.java" />
         <option value="$PROJECT_DIR$/src/DataAdapter.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="185" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="145" />
     <option name="y" value="23" />
-    <option name="width" value="1074" />
+    <option name="width" value="1114" />
     <option name="height" value="692" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -226,6 +230,11 @@
             </path>
             <path>
               <item name="StoreManager_iteration2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="StoreManager_iteration2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="StoreManager_iteration2" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
@@ -235,7 +244,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555278995324" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555307135526" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -295,22 +304,22 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="185" y="23" width="1074" height="692" extended-state="0" />
+    <frame x="145" y="23" width="1114" height="692" extended-state="0" />
     <layout>
       <window_info id="Image Layers" />
       <window_info id="Designer" />
       <window_info id="UI Designer" />
       <window_info id="Capture Tool" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21042831" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14901257" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" weight="0.2200957" />
+      <window_info anchor="bottom" id="Messages" weight="0.2190016" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33011273" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3188406" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39967898" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -354,81 +363,6 @@
     </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/CustomerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="31" selection-start-column="31" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CustomerView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="25" selection-start-column="25" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ProductModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="51" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LoginView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="30" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CashierView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="38" lean-forward="true" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CheckoutView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2942#2943#0" expanded="true" />
-            <element signature="e#2979#2980#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ReturnView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="25" lean-forward="true" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2942#2943#0" expanded="true" />
-            <element signature="e#2979#2980#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ReturnModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -436,30 +370,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CashierController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="52" lean-forward="true" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ReturnController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4">
-          <caret line="53" column="30" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ManagerView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" selection-start-line="5" selection-end-line="24" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OrderModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ManagerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -476,10 +407,92 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/OrderModel.java">
+    <entry file="file://$PROJECT_DIR$/src/AdminController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="8" />
+        <state relative-caret-position="240">
+          <caret line="16" column="48" lean-forward="true" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ReturnView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1172">
+          <caret line="11" column="25" lean-forward="true" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ReturnController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="60" column="13" lean-forward="true" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CashierView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="5" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="23" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CheckoutView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2942#2943#0" expanded="true" />
+            <element signature="e#2979#2980#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CashierController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="15" column="52" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CheckoutController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="85" column="33" selection-start-line="85" selection-start-column="12" selection-end-line="85" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProductView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="917">
+          <caret line="68" column="1" selection-start-line="68" selection-start-column="1" selection-end-line="68" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProductModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
@@ -490,20 +503,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ProductView.java">
+    <entry file="file://$PROJECT_DIR$/src/ChangeUserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="26" lean-forward="true" selection-end-line="69" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AddUserView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="230">
+          <caret line="63" selection-start-line="63" selection-end-line="63" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -512,48 +515,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ChangeUserView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="238">
+          <caret line="28" column="28" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminController.java">
+    <entry file="file://$PROJECT_DIR$/src/LoginView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="39" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+        <state relative-caret-position="351">
+          <caret line="41" column="31" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CheckoutController.java">
+    <entry file="file://$PROJECT_DIR$/src/CustomerView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="83" column="8" selection-start-line="83" selection-start-column="8" selection-end-line="86" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ChangeUserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="59" column="15" selection-start-line="59" selection-start-column="15" selection-end-line="59" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ManagerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+        <state relative-caret-position="120">
+          <caret line="8" column="45" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -562,18 +545,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AddUserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+        <state relative-caret-position="94">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ProductController.java">
+    <entry file="file://$PROJECT_DIR$/src/CustomerModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="55" column="38" selection-start-line="55" selection-start-column="38" selection-end-line="55" selection-end-column="38" />
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="53" column="21" lean-forward="true" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AddUserView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="45" column="25" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CustomerInfoView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="44" selection-start-line="44" selection-end-line="44" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -582,19 +592,47 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Application.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+        <state relative-caret-position="150">
+          <caret line="23" column="67" lean-forward="true" selection-start-line="23" selection-start-column="67" selection-end-line="23" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CustomerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="61">
+          <caret line="12" column="52" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProductController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="56" column="33" lean-forward="true" selection-start-line="55" selection-start-column="12" selection-end-line="56" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CustomerInfoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DataAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="12" column="45" lean-forward="true" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
+        <state relative-caret-position="299">
+          <caret line="353" column="22" selection-start-line="353" selection-start-column="22" selection-end-line="353" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5887#5899#0" expanded="true" />
-            <element signature="e#6722#6734#0" expanded="true" />
           </folding>
         </state>
       </provider>

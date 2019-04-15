@@ -13,14 +13,14 @@ public class ChangeUserView extends JFrame {
 
     public ChangeUserView() {
 
-        this.setTitle("*** Add a New User ***");
+        this.setTitle("*** Change Password for A User ***");
         this.setSize(new Dimension(600, 400));
         this.getContentPane().setLayout(new BoxLayout(this.getContentPane(), BoxLayout.PAGE_AXIS));
 
         //infos
         JPanel p = new JPanel();
-        p.setLayout(new GridLayout(0,2,25,10));
-        p.setBorder(BorderFactory.createEmptyBorder(20,150,20,150));
+        p.setLayout(new GridLayout(4,2,25,20));
+        p.setBorder(BorderFactory.createEmptyBorder(60,120,40,120));
         p.add(new JLabel("User Name", JLabel.TRAILING));
         p.add(txtUserName);
         p.add(new JLabel("Old Password", JLabel.TRAILING));
@@ -33,7 +33,7 @@ public class ChangeUserView extends JFrame {
         this.getContentPane().add(p);
 
         JPanel buttonPanel = new JPanel();
-        buttonPanel.setBorder(BorderFactory.createEmptyBorder(0,0,30,0));
+        buttonPanel.setBorder(BorderFactory.createEmptyBorder(0,0,20,0));
         buttonPanel.add(btnCancel);
         buttonPanel.add(btnSave);
 

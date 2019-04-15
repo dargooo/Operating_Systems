@@ -3,7 +3,7 @@ public class Application {
     static DataAdapter db = new DataAdapter();
 
     static LoginView loginView = new LoginView();
-    static LoginController loginController = new LoginController(loginView);
+    static LoginController loginController = new LoginController(loginView, db);
 
     static ManagerView managerView = new ManagerView();
     static ManagerController managerController = new ManagerController(managerView);
@@ -25,10 +25,16 @@ public class Application {
     static ChangeUserView changeUserView = new ChangeUserView();
     static ChangeUserController changeUserController = new ChangeUserController(changeUserView, db);
 
+    static CustomerView customerView = new CustomerView();
+    static CustomerController customerController;
+    static CustomerInfoView customerInfoView;
+    static CustomerInfoController customerInfoController;
 
     public static void main(String[] args) {
         db.connect();
-        //loginView.setVisible(true);
-        managerView.setVisible(true);
+        loginView.setVisible(true);
+        //addUserView.setVisible(true);
+        //managerView.setVisible(true);
+        //customerView.setVisible(true);
     }
 }

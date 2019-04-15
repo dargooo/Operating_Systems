@@ -26,8 +26,8 @@ public class ReturnController implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == rView.btnCancel) {
             Application.cashierView.show();
-            Application.checkoutView.setVisible(false);
-            Application.checkoutView.clear();
+            Application.returnView.setVisible(false);
+            Application.returnView.clear();
         }
         if (e.getSource() == rView.btnSave) {
             loadOrderline();
@@ -47,7 +47,7 @@ public class ReturnController implements ActionListener {
         Date date = new Date();
         returnModel.date = dateFormat.format(date);
         db.saveReturn(returnModel);
-        JOptionPane.showMessageDialog(null, "" + returnModel.customer + "return products successfully!\n"
+        JOptionPane.showMessageDialog(null, "" + returnModel.customer + " return products successfully!\n"
                 + "Total Amount: $" + returnModel.total);
     }
 
