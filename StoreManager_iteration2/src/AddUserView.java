@@ -11,6 +11,7 @@ public class AddUserView extends JFrame {
 
     public JButton btnCancel = new JButton("Cancel");
     public JButton btnSave = new JButton("Save");
+    public JComboBox roleCombo;
 
     public AddUserView() {
 
@@ -24,8 +25,15 @@ public class AddUserView extends JFrame {
         p.setBorder(BorderFactory.createEmptyBorder(40,120,30,120));
         p.add(new JLabel("Name", JLabel.TRAILING));
         p.add(txtName);
+
         p.add(new JLabel("Role", JLabel.TRAILING));
-        p.add(txtRole);
+        //p.add(txtRole);
+
+        String[] roles = { "admin", "manager", "cashier", "customer" };
+        roleCombo = new JComboBox(roles);
+        roleCombo.setSelectedIndex(3);
+        p.add(roleCombo);
+
         p.add(new JLabel("User Name", JLabel.TRAILING));
         p.add(txtUserName);
         p.add(new JLabel("Password", JLabel.TRAILING));

@@ -133,6 +133,7 @@ public class ReturnView extends JFrame {
         txtBarcode.setText("");
         txtQuantity.setText("");
         txtCustomer.setText("");
+
     }
 
 

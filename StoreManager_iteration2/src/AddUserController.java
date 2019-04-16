@@ -13,6 +13,7 @@ public class AddUserController implements ActionListener {
         this.db = da;
         aView.btnCancel.addActionListener(this);
         aView.btnSave.addActionListener(this);
+        aView.roleCombo.addActionListener(this);
     }
 
     @Override
@@ -37,7 +38,7 @@ public class AddUserController implements ActionListener {
         try {
             user.userId = db.maxUserID() + 1;
             user.userName = aView.txtUserName.getText();
-            user.role = aView.txtRole.getText();
+            user.role = aView.roleCombo.getSelectedItem().toString();
             user.password = aView.txtPassword1.getText();
             user.name = aView.txtName.getText();
 

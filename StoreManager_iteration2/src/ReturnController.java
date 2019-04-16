@@ -11,7 +11,7 @@ public class ReturnController implements ActionListener {
     ReturnView rView;
     DataAdapter db;
     DecimalFormat df = new DecimalFormat(".##");
-    Double subTotal = 0.0, taxTotal = 0.0, costToal = 0.0;
+    public Double subTotal = 0.0, taxTotal = 0.0, costToal = 0.0;
     DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
 
     public ReturnController(ReturnView view, DataAdapter da) {
@@ -27,6 +27,9 @@ public class ReturnController implements ActionListener {
         if (e.getSource() == rView.btnCancel) {
             Application.cashierView.show();
             Application.returnView.setVisible(false);
+            subTotal = 0.0;
+            taxTotal = 0.0;
+            costToal = 0.0;
             Application.returnView.clear();
         }
         if (e.getSource() == rView.btnSave) {

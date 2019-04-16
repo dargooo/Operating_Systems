@@ -73,7 +73,7 @@ public class CheckoutView extends JFrame {
 
         JPanel line0 = new JPanel();
         txtCustomer = new JTextField(10);
-        line0.add(new JLabel("Customer's Name: "));
+        line0.add(new JLabel("Customer's Full Name: "));
         line0.add(txtCustomer);
         line2.add(line0);
 

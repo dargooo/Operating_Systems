@@ -23,7 +23,10 @@ public class CustomerController implements ActionListener {
             Application.customerView.dispose();
         }
         if (e.getSource() == customerView.btnStatus) {
-
+            Application.historyView = new HistoryView(customer, Application.db);
+            Application.historyController = new HistoryController(Application.historyView);
+            Application.historyView.show();
+            Application.customerView.dispose();
         }
         if (e.getSource() == customerView.btnExit) {
             Application.loginView.show();

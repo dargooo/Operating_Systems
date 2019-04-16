@@ -29,6 +29,8 @@ public class Application {
     static CustomerController customerController;
     static CustomerInfoView customerInfoView;
     static CustomerInfoController customerInfoController;
+    static HistoryView historyView;
+    static HistoryController historyController;
 
     public static void main(String[] args) {
         db.connect();

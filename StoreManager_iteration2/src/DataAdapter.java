@@ -23,27 +23,38 @@ public class DataAdapter {
 
             Statement stmt = conn.createStatement();
 
+            System.out.println("Products ==============================================");
             ResultSet rs = stmt.executeQuery("SELECT * FROM product_table");
             while (rs.next()) {
-                System.out.println(rs.getString(1) + " " + rs.getString(2) + " " + rs.getString(3) + " " + rs.getString(4)
-                        + " " + rs.getString(5) + " " + rs.getString(6) + " " + rs.getString(7));
+                System.out.println(rs.getString(1) + "\t" + rs.getString(2) + "\t" + rs.getString(3) + "\t" + rs.getString(4)
+                        + "\t" + "$" + rs.getString(5) + "\t" + rs.getString(6) + "\t" + rs.getString(7));
             }
 
+            System.out.println("Customers ==============================================");
+            ResultSet rs1 = stmt.executeQuery("SELECT * FROM customer_table");
+            while (rs1.next()) {
+                System.out.println(rs1.getString(1) + "\t" + rs1.getString(2) + "\t" + rs1.getString(3) + "\t" + rs1.getString(4)
+                        + "\t" + rs1.getString(5));
+            }
+
+            System.out.println("Orders ==============================================");
             ResultSet rs2 = stmt.executeQuery("SELECT * FROM order_table");
             while (rs2.next()) {
-                System.out.println(rs2.getString(1) + " " + rs2.getString(2) + " " + rs2.getString(3) + " $" + rs2.getString(4)
-                        + " $" + rs2.getString(5) + " $" + rs2.getString(6));
+                System.out.println(rs2.getString(1) + "\t" + rs2.getString(2) + "\t" + rs2.getString(3) + "\t$" + rs2.getString(4)
+                        + "\t$" + rs2.getString(5) + "\t$" + rs2.getString(6));
             }
 
+            System.out.println("Returns ==============================================");
             ResultSet rs4 = stmt.executeQuery("SELECT * FROM return_table");
             while (rs4.next()) {
-                System.out.println(rs4.getString(1) + " " + rs4.getString(2) + " " + rs4.getString(3) + " $" + rs4.getString(4)
-                        + " $" + rs4.getString(5) + " $" + rs4.getString(6));
+                System.out.println(rs4.getString(1) + "\t" + rs4.getString(2) + "\t" + rs4.getString(3) + "\t$" + rs4.getString(4)
+                        + "\t$" + rs4.getString(5) + "\t$" + rs4.getString(6));
             }
 
+            System.out.println("Users ==============================================");
             ResultSet rs3 = stmt.executeQuery("SELECT * FROM user_table");
             while (rs3.next()) {
-                System.out.println(rs3.getInt(1) + " " + rs3.getString(2) + " " + rs3.getString(3) + " " + rs3.getString(4) + " " + rs3.getString(5));
+                System.out.println(rs3.getInt(1) + "\t" + rs3.getString(2) + "\t" + rs3.getString(3) + "\t" + rs3.getString(4) + "\t" + rs3.getString(5));
             }
 
         } catch (Exception e) {
@@ -55,7 +66,7 @@ public class DataAdapter {
         try {
 
             if (loadProduct(product.productID) == null) {           // this is a new product!
-                String query = "INSERT INTO product_table(product_id, name, barcode, quantity, price, provider, provider_contact)" + " values (?, ?, ?, ?, ?, ?, ?)";
+                String query = "INSERT INTO product_table(product_id, name, barcode, available_unit, price, provider, provider_contact)" + " values (?, ?, ?, ?, ?, ?, ?)";
                 PreparedStatement ps = conn.prepareStatement(query);
                 ps.setInt(1, product.productID);
                 ps.setString(2, product.name);
@@ -67,7 +78,7 @@ public class DataAdapter {
                 ps.execute();
             }
             else {
-                String query = "UPDATE product_table SET product_id = ?, name = ?, barcode = ?, quantity = ?, price = ?, provider = ?, provider_contact = ?  WHERE product_id = ?";
+                String query = "UPDATE product_table SET product_id = ?, name = ?, barcode = ?, available_unit = ?, price = ?, provider = ?, provider_contact = ?  WHERE product_id = ?";
                 PreparedStatement ps = conn.prepareStatement(query);
                 ps.setInt(1, product.productID);
                 ps.setString(2, product.name);
@@ -183,6 +194,14 @@ public class DataAdapter {
             ps.setDouble(6, order.total);
             ps.execute();
 
+            int customerId = findCustomerId(order.customer);
+            if (customerId != -1) {
+                String query2 = "INSERT INTO order_customer values (?, ?)";
+                PreparedStatement ps2 = conn.prepareStatement(query2);
+                ps2.setInt(1, order.orderID);
+                ps2.setInt(2, customerId);
+                ps2.execute();
+            }
         } catch (Exception ex) {
             ex.printStackTrace();
         }
@@ -200,6 +219,15 @@ public class DataAdapter {
             ps.setDouble(5, returnModel.tax);
             ps.setDouble(6, returnModel.total);
             ps.execute();
+
+            int customerId = findCustomerId(returnModel.customer);
+            if (customerId != -1) {
+                String query2 = "INSERT INTO return_customer values (?, ?)";
+                PreparedStatement ps2 = conn.prepareStatement(query2);
+                ps2.setInt(1, returnModel.returnID);
+                ps2.setInt(2, customerId);
+                ps2.execute();
+            }
 
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -220,6 +248,60 @@ public class DataAdapter {
                 order.tax = rs.getDouble(5);
                 order.total = rs.getDouble(6);
                 list.add(order);
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        return list;
+    }
+
+    public List<OrderModel> searchId(int userId) {
+        List<OrderModel> list = new ArrayList<>();
+        try(PreparedStatement pstmt = conn.prepareStatement("SELECT * FROM order_customer WHERE user_id = ?");) {
+            pstmt.setInt(1, userId);
+            ResultSet rs = pstmt.executeQuery();
+            while (rs.next()) {
+                int orderId = rs.getInt(1);
+                try(PreparedStatement ps = conn.prepareStatement("SELECT * FROM order_table WHERE order_id = ?");) {
+                    ps.setInt(1, orderId);
+                    ResultSet rss = ps.executeQuery();
+                    OrderModel order = new OrderModel();
+                    while (rss.next()) {
+                        order.orderID = rss.getInt(1);
+                        order.date = rss.getString(3);
+                        order.total = rss.getDouble(6);
+                    }
+                    list.add(order);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        return list;
+    }
+
+    public List<ReturnModel> searchIdReturn(int userId) {
+        List<ReturnModel> list = new ArrayList<>();
+        try(PreparedStatement pstmt = conn.prepareStatement("SELECT * FROM return_customer WHERE user_id = ?");) {
+            pstmt.setInt(1, userId);
+            ResultSet rs = pstmt.executeQuery();
+            while (rs.next()) {
+                int orderId = rs.getInt(1);
+                try(PreparedStatement ps = conn.prepareStatement("SELECT * FROM return_table WHERE return_id = ?");) {
+                    ps.setInt(1, orderId);
+                    ResultSet rss = ps.executeQuery();
+                    ReturnModel returnModel = new ReturnModel();
+                    while (rss.next()) {
+                        returnModel.returnID = rss.getInt(1);
+                        returnModel.date = rss.getString(3);
+                        returnModel.total = rss.getDouble(6);
+                    }
+                    list.add(returnModel);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -352,6 +434,21 @@ public class DataAdapter {
         ps2.setString(1,customer.userName);
         ps2.setInt(2, customer.userId);
         ps2.execute();
+    }
+
+    public int findCustomerId(String name) {
+        try {
+            PreparedStatement pstmt = conn.prepareStatement("SELECT * FROM customer_table WHERE name = ?");
+            pstmt.setString(1, name);
+            ResultSet rs = pstmt.executeQuery();
+            if (rs.next()) {
+                return rs.getInt(1);
+            }
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        return -1;
     }
 
 }
