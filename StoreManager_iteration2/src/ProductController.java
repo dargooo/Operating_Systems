@@ -5,9 +5,9 @@ import java.awt.event.ActionListener;
 public class ProductController implements ActionListener {
 
     ProductView pView;
-    DataAdapter da;
+    RemoteDataAccess da;
 
-    public ProductController(ProductView view, DataAdapter da) {
+    public ProductController(ProductView view, RemoteDataAccess da) {
         pView = view;
         this.da = da;
         pView.btnCheck.addActionListener(this);
@@ -18,7 +18,7 @@ public class ProductController implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == pView.btnCheck) {
-            display();
+            loadProduct();
         }
 
         if (e.getSource() == pView.btnSave) {
@@ -59,7 +59,7 @@ public class ProductController implements ActionListener {
 
 
 
-    private void display() {
+    private void loadProduct() {
         try {
             int productID = Integer.parseInt(pView.txtProductID.getText());
             ProductModel productModel = da.loadProduct(productID);

@@ -6,9 +6,9 @@ import java.net.InetAddress;
 public class AddUserController implements ActionListener {
 
     AddUserView aView;
-    DataAdapter db;
+    RemoteDataAccess db;
 
-    public AddUserController(AddUserView view, DataAdapter da) {
+    public AddUserController(AddUserView view, RemoteDataAccess da) {
         aView = view;
         this.db = da;
         aView.btnCancel.addActionListener(this);
@@ -36,7 +36,6 @@ public class AddUserController implements ActionListener {
         UserModel user = new UserModel();
 
         try {
-            user.userId = db.maxUserID() + 1;
             user.userName = aView.txtUserName.getText();
             user.role = aView.roleCombo.getSelectedItem().toString();
             user.password = aView.txtPassword1.getText();
@@ -57,7 +56,7 @@ public class AddUserController implements ActionListener {
                 return;
             }
 
-            db.addUser(user);
+            db.saveUser(user);
             JOptionPane.showMessageDialog(null, "User added successfully!");
 
         } catch (NumberFormatException ex) {

@@ -4,11 +4,11 @@ import java.awt.event.ActionListener;
 
 public class CustomerInfoController implements ActionListener {
 
-    DataAdapter db;
+    RemoteDataAccess db;
     CustomerModel customer;
     CustomerInfoView customerInfoView;
 
-    public CustomerInfoController(CustomerInfoView view, CustomerModel customerModel, DataAdapter da) {
+    public CustomerInfoController(CustomerInfoView view, CustomerModel customerModel, RemoteDataAccess da) {
         customer = customerModel;
         customerInfoView = view;
         db = da;
@@ -25,12 +25,12 @@ public class CustomerInfoController implements ActionListener {
         if (e.getSource() == customerInfoView.btnReturn) {
             Application.customerView.show();
             Application.customerInfoView.dispose();
+
         }
     }
 
     public void saveInfo() {
         try {
-            customer.userName = customerInfoView.txtUserName.getText();
             customer.addr = customerInfoView.txtAddr.getText();
             customer.phone = customerInfoView.txtPhone.getText();
             db.saveCustomer(customer);

@@ -17,18 +17,24 @@ public class CustomerController implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == customerView.btnInfo) {
-            Application.customerInfoView = new CustomerInfoView(customer);
+            if (customer == null)   return;
+            Application.customerInfoView = new CustomerInfoView();
             Application.customerInfoController = new CustomerInfoController(Application.customerInfoView, customer, Application.db);
+            Application.customerInfoView.build(customer);
             Application.customerInfoView.show();
             Application.customerView.dispose();
         }
         if (e.getSource() == customerView.btnStatus) {
+            if (customer == null)   return;
             Application.historyView = new HistoryView(customer, Application.db);
             Application.historyController = new HistoryController(Application.historyView);
             Application.historyView.show();
             Application.customerView.dispose();
         }
         if (e.getSource() == customerView.btnExit) {
+            Application.customerInfoView = null;
+            Application.customerInfoController = null;
+            customer = null;
             Application.loginView.show();
             Application.customerView.dispose();
         }

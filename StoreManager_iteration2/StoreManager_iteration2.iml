@@ -16,5 +16,7 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" exported="" name="gson-2.8.2" level="project" />
+    <orderEntry type="library" exported="" name="sqlite-jdbc-3.23.1" level="project" />
   </component>
 </module>

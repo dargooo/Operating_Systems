@@ -1,6 +1,6 @@
 public class Application {
 
-    static DataAdapter db = new DataAdapter();
+    static RemoteDataAccess db = new RemoteDataAccess();
 
     static LoginView loginView = new LoginView();
     static LoginController loginController = new LoginController(loginView, db);
@@ -27,7 +27,7 @@ public class Application {
 
     static CustomerView customerView = new CustomerView();
     static CustomerController customerController;
-    static CustomerInfoView customerInfoView;
+    static CustomerInfoView customerInfoView = new CustomerInfoView();
     static CustomerInfoController customerInfoController;
     static HistoryView historyView;
     static HistoryController historyController;
@@ -35,8 +35,5 @@ public class Application {
     public static void main(String[] args) {
         db.connect();
         loginView.setVisible(true);
-        //addUserView.setVisible(true);
-        //managerView.setVisible(true);
-        //customerView.setVisible(true);
     }
 }

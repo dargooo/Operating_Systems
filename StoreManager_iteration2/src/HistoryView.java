@@ -5,12 +5,12 @@ import java.util.List;
 public class HistoryView extends JFrame {
 
     CustomerModel customer;
-    DataAdapter db;
+    RemoteDataAccess db;
     public JButton btnOK;
     public JPanel central, p;
-    public Container c, c1, c2, c3, c4, c5, c6;
+    public Container c, c1, c2, c3, c4;
 
-    public HistoryView(CustomerModel customer, DataAdapter da) {
+    public HistoryView(CustomerModel customer, RemoteDataAccess da) {
         this.customer = customer;
         db = da;
 
@@ -52,8 +52,8 @@ public class HistoryView extends JFrame {
         c4.add(new JLabel("Amount"));
         c4.add(new JLabel("====="));
 
-        List<OrderModel> list = db.searchId(customer.userId);
-        List<ReturnModel> list2 = db.searchIdReturn(customer.userId);
+        List<OrderModel> list = db.loadOrders(customer.userName);
+        List<ReturnModel> list2 = db.loadReturns(customer.userName);
 
         for (OrderModel order : list) {
             c1.add(new JLabel("Order"));

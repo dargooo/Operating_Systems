@@ -9,12 +9,12 @@ import java.util.Date;
 public class ReturnController implements ActionListener {
 
     ReturnView rView;
-    DataAdapter db;
+    RemoteDataAccess db;
     DecimalFormat df = new DecimalFormat(".##");
     public Double subTotal = 0.0, taxTotal = 0.0, costToal = 0.0;
     DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
 
-    public ReturnController(ReturnView view, DataAdapter da) {
+    public ReturnController(ReturnView view, RemoteDataAccess da) {
         rView = view;
         rView.btnReturn.addActionListener(this);
         rView.btnCancel.addActionListener(this);
@@ -42,15 +42,23 @@ public class ReturnController implements ActionListener {
 
     private void createReturn() {
         ReturnModel returnModel = new ReturnModel();
-        returnModel.returnID = db.maxReturnID() + 1;
+        returnModel.returnID = -1;
         returnModel.customer = rView.txtCustomer.getText();
+        String name;
+        if (returnModel.customer == null || returnModel.customer.equals("")) {
+            returnModel.customer = "anonymous";
+            name = "Anonymous";
+        }
+        else {
+            name = db.findCustomer(returnModel.customer).name;
+        }
         returnModel.subTotal = Double.parseDouble(df.format(subTotal));
         returnModel.tax = Double.parseDouble(df.format(taxTotal));
         returnModel.total = Double.parseDouble(df.format(costToal));
         Date date = new Date();
         returnModel.date = dateFormat.format(date);
         db.saveReturn(returnModel);
-        JOptionPane.showMessageDialog(null, "" + returnModel.customer + " return products successfully!\n"
+        JOptionPane.showMessageDialog(null, "" + name + " return products successfully!\n"
                 + "Total Amount: $" + returnModel.total);
     }
 

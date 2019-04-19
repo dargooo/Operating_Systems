@@ -6,9 +6,9 @@ import java.net.InetAddress;
 public class ChangeUserController implements ActionListener {
 
     ChangeUserView cView;
-    DataAdapter db;
+    RemoteDataAccess db;
 
-    public ChangeUserController(ChangeUserView view, DataAdapter da) {
+    public ChangeUserController(ChangeUserView view, RemoteDataAccess da) {
         cView = view;
         this.db = da;
         cView.btnCancel.addActionListener(this);

@@ -73,13 +73,13 @@ public class ReturnView extends JFrame {
 
         JPanel line0 = new JPanel();
         txtCustomer = new JTextField(10);
-        line0.add(new JLabel("Customer's Name: "));
+        line0.add(new JLabel("Customer's UserName (If has one) : "));
         line0.add(txtCustomer);
         line2.add(line0);
 
         JPanel line3 = new JPanel();
         btnCancel = new JButton("Cancel");
-        btnReturn = new JButton("Return");
+        btnReturn = new JButton("Save");
         line3.add(btnCancel);
         line3.add(btnReturn);
         line2.add(line3);

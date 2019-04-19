@@ -9,12 +9,12 @@ import java.util.Date;
 public class CheckoutController implements ActionListener {
 
     CheckoutView cView;
-    DataAdapter db;
+    RemoteDataAccess db;
     DecimalFormat df = new DecimalFormat(".##");
     Double subTotal = 0.0, taxTotal = 0.0, costToal = 0.0;
     DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
 
-    public CheckoutController(CheckoutView view, DataAdapter da) {
+    public CheckoutController(CheckoutView view, RemoteDataAccess da) {
         cView = view;
         cView.btnCheckout.addActionListener(this);
         cView.btnCancel.addActionListener(this);
@@ -39,15 +39,31 @@ public class CheckoutController implements ActionListener {
 
     private void createOrder() {
         OrderModel order = new OrderModel();
-        order.orderID = db.maxOrderID() + 1;
+        order.orderID = -1;
         order.customer = cView.txtCustomer.getText();
+        String name;
+        if (order.customer == null || order.customer.equals("")) {
+            order.customer = "anonymous";
+            name = "Anonymous";
+        }
+        else {
+            CustomerModel customer = db.findCustomer(order.customer);
+            if (customer == null) {
+                JOptionPane.showMessageDialog(null, "Customer's UserName doesn't exist!");
+                return;
+            }
+            else {
+                name = customer.name;
+            }
+        }
+
         order.subTotal = Double.parseDouble(df.format(subTotal));
         order.tax = Double.parseDouble(df.format(taxTotal));
         order.total = Double.parseDouble(df.format(costToal));
         Date date = new Date();
         order.date = dateFormat.format(date);
         db.saveOrder(order);
-        JOptionPane.showMessageDialog(null, "" + order.customer + "'s order checked out successfully!\n"
+        JOptionPane.showMessageDialog(null, "" + name + "'s order checked out successfully!\n"
                 + "Total Amount: $" + order.total);
     }
 
@@ -63,6 +79,10 @@ public class CheckoutController implements ActionListener {
                 double q = Double.parseDouble(cView.txtQuantity.getText());
                 if (q > p.quantity) {
                     JOptionPane.showMessageDialog(null, "We don't have that much " + p.name + "!");
+                    return;
+                }
+                if (q <= 0) {
+                    JOptionPane.showMessageDialog(null, "Do you really want to buy it?");
                     return;
                 }
                 cView.addTxt(cView.c1, String.valueOf(p.productID));

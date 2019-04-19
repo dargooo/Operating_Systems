@@ -4,10 +4,10 @@ import java.awt.event.ActionListener;
 
 public class LoginController implements ActionListener {
 
-    DataAdapter db;
+    RemoteDataAccess db;
     LoginView loginView;
 
-    public LoginController(LoginView loginView, DataAdapter db) {
+    public LoginController(LoginView loginView, RemoteDataAccess db) {
         this.loginView = loginView;
         loginView.btnExit.addActionListener(this);
         loginView.btnLogin.addActionListener(this);
@@ -60,12 +60,12 @@ public class LoginController implements ActionListener {
             }
             //customer
             if (user.role.equals("customer")) {
-                CustomerModel customer = db.findCustomer(user.userId);
+                CustomerModel customer = db.findCustomer(user.userName);
                 Application.customerView.show();
                 Application.customerController = new CustomerController(Application.customerView, customer);
                 Application.loginView.dispose();
                 Application.loginView.clear();
-                System.out.println("customer login");
+                System.out.println("customer " + user.userName + " login");
             }
 
         }
